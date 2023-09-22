@@ -7,6 +7,19 @@
 var app = require('../app');
 var debug = require('debug')('email-api:server');
 var http = require('http');
+var mongoose = require("mongoose")
+
+const starter = async () => {
+  try {
+    await mongoose.connect(
+      "mongodb+srv://hassantarif4:hvdURRFW6yXxxmSW@cluster0.a9tle1x.mongodb.net/?retryWrites=true&w=majority"
+    );
+    console.log("connection is ready ///")
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+};
 
 /**
  * Get port from environment and store in Express.
@@ -24,7 +37,7 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
+starter()
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);

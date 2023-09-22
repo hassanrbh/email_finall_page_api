@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/b16c28f0-4bef-4bc9-8724-aaa068056ed7/resourceGroups/vaultek/providers/Microsoft.Web/sites/vaultek",
+    "appService.deploySubpath": "."
+}
